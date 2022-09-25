@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body>
+        <h1>Contador</h1>
+        <p>Número de visitas: {{visitas}}</p>
+        <p>Contador: {{contador}}</p>
+
+        <form action="/suma2" method="post">
+            <button type="submit" formmethod="post">suma 2</button>
+        </form>
+
+        <form action="/inicio" method="post">
+            <button type="submit" formmethod="post">Reiniciar</button>
+        </form>
+
+        <form action="/sumar" method="post">
+            <button type="submit" formmethod="post">Sumar</button>
+            <input type="number" name='numero'>
+        </form>
+</body>
+</html>
